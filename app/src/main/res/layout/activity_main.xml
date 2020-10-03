@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#EDEBE8"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0000FF"
+            android:gravity="center_horizontal"
+            android:text="@string/strTítulo"
+            android:textColor="#FFEB3B"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tblRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1,2">
+
+        <TableRow
+            android:id="@+id/tbrRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:paddingRight="4dp"
+                android:text="@string/Location"
+                android:paddingStart="2dp"
+                android:paddingEnd="4dp" />
+
+            <EditText
+                android:id="@+id/txtLat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:cursorVisible="true"
+                android:ems="10"
+                android:hint="@string/strCoord"
+                android:inputType="numberDecimal|numberSigned"
+                android:singleLine="true"
+                android:text="@string/Latitude"
+                android:autofillHints="">
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/txtLon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:cursorVisible="true"
+                android:ems="10"
+                android:hint="@string/strCoord"
+                android:inputType="numberDecimal|numberSigned"
+                android:singleLine="true"
+                android:text="@string/Longitude"
+                android:autofillHints="" />
+
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showMe"
+        android:text="@string/Showme" />
+
+</LinearLayout>
